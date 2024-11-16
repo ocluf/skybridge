@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Skybridge</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .status {
+      margin: 10px 0;
+      padding: 8px;
+      border-radius: 4px;
+    }
+
+    .connected {
+      background-color: #dff0d8;
+      color: #3c763d;
+    }
+
+    .disconnected {
+      background-color: #f2dede;
+      color: #a94442;
+    }
+
+    button {
+      margin: 5px;
+      padding: 8px 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Skybridge</h2>
+    <div id="connectionStatus" class="status"></div>
+    <button id="settingsButton">Open Settings</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+
+</html>

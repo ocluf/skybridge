@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Skybridge Settings</title>
+  <style>
+    body {
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .status {
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 4px;
+    }
+
+    .success {
+      background-color: #dff0d8;
+      color: #3c763d;
+    }
+
+    .error {
+      background-color: #f2dede;
+      color: #a94442;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: normal;
+      margin-top: 4px;
+    }
+
+    .badge-success {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .change-password-btn {
+      background-color: transparent;
+      color: #2196F3;
+      padding: 4px 8px;
+      border: 1px solid #2196F3;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+      margin-left: 8px;
+    }
+
+    .change-password-btn:hover {
+      background-color: #2196F3;
+      color: white;
+    }
+
+    .password-section {
+      margin-bottom: 8px;
+    }
+
+    #save {
+      margin-top: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Bluesky Connection Settings</h2>
+    <div class="form-group">
+      <label for="identifier">Bluesky Identifier (handle or email):</label>
+      <input type="text" id="identifier" placeholder="you.bsky.social">
+    </div>
+    <div class="form-group">
+      <div class="password-section">
+        <label for="password" id="passwordLabel">App Password</label>
+        <span id="passwordStatus" class="badge badge-success" style="display: none;">configured</span>
+        <button id="changePasswordBtn" class="change-password-btn" style="display: none;">Change Password</button>
+      </div>
+      <div id="passwordInputSection">
+        <input type="password" id="password" placeholder="Enter your app password">
+        <small>Create an app password at <a href="https://bsky.app/settings/app-passwords"
+            target="_blank">bsky.app/settings/app-passwords</a></small>
+      </div>
+    </div>
+    <button id="save">Save Settings</button>
+    <div id="status" class="status" style="display: none;"></div>
+  </div>
+  <script src="options.js"></script>
+</body>
+
+</html>
